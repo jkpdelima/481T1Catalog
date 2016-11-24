@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -42,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 MainActivity.this.adapter.getFilter().filter(s);
+                if(s.length() > 0){
+                    lstSearch.setVisibility(View.VISIBLE);
+                } else {
+                    lstSearch.setVisibility(View.GONE);
+                }
             }
 
             @Override
