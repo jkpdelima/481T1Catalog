@@ -25,7 +25,13 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".beveragesActivity" />
+        <activity android:name=".fruitsActivity" />
+        <activity android:name=".veggiesActivity" />
+        <activity android:name=".meatsActivity" />
+        <activity android:name=".dairyActivity" />
+        <activity android:name=".snacksActivity"></activity>
     </application>
 
 </manifest>

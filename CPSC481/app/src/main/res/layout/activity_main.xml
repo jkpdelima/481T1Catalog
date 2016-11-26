@@ -24,7 +24,7 @@
     </ListView>
 
     <Button
-        android:text="fruits"
+        android:text="Fruits"
         android:textStyle="bold"
         android:textSize="40sp"
         android:layout_width="match_parent"
@@ -38,7 +38,7 @@
         android:layout_height="65dp" />
 
     <Button
-        android:text="veggies"
+        android:text="Vegetables"
         android:textStyle="bold"
         android:textSize="40sp"
         android:background="@drawable/veggies"
@@ -52,7 +52,7 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="meat"
+        android:text="Meats"
         android:background="@drawable/meat"
         android:textStyle="bold"
         android:textSize="40sp"
@@ -66,7 +66,7 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="dairy"
+        android:text="Dairy"
         android:background="@drawable/dairy"
         android:textStyle="bold"
         android:textSize="40sp"
@@ -80,7 +80,7 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="snacks"
+        android:text="Snacks"
         android:background="@drawable/snacks"
         android:textStyle="bold"
         android:textSize="40sp"
@@ -94,7 +94,7 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="beverages"
+        android:text="Beverages"
         android:background="@drawable/beverages"
         android:textStyle="bold"
         android:textSize="40sp"

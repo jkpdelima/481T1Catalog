@@ -9,6 +9,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -18,7 +19,7 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-//https://www.youtube.com/watch?v=UaIDyMebJSw (search reference)
+
 public class MainActivity extends AppCompatActivity {
 
     private ListView lstSearch;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //search bar
         lstSearch = (ListView) findViewById(R.id.lstSearch);
         edtSearch = (EditText) findViewById(R.id.edtSearch);
         adapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.textView, data);
@@ -54,12 +56,11 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String data = String.valueOf(parent.getItemAtPosition(position));
-                        Toast.makeText(MainActivity.this, data, Toast.LENGTH_LONG).show();
+                        //Toast.makeText(MainActivity.this, data, Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(getApplicationContext(), Main2Activity.class)); //goes to new activity
                     }
                 }
         );
-
 
         edtSearch.addTextChangedListener(new TextWatcher() {
             @Override
@@ -80,6 +81,74 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
 
+            }
+        });
+
+
+        //buttons for-----------------------------------------------------------------------
+
+        //fruits--------------------------
+        Button fruits = (Button) findViewById(R.id.fruits);
+        fruits.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, fruitsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //vegetables----------------------
+        Button vegetables = (Button) findViewById(R.id.veggies);
+        vegetables.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, veggiesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //meats----------------------------
+        Button meats = (Button) findViewById(R.id.meat);
+        meats.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, meatsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //dairy-----------------------------
+        Button dairy = (Button) findViewById(R.id.dairy);
+        dairy.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, dairyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //snacks-----------------------------
+        Button snacks = (Button) findViewById(R.id.snacks);
+        snacks.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, snacksActivity.class);
+                startActivity(intent);
+            }
+        });
+        //beverages--------------------------
+        Button beverages = (Button) findViewById(R.id.beverages);
+        beverages.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, beveragesActivity.class);
+                startActivity(intent);
             }
         });
         // ATTENTION: This was auto-generated to implement the App Indexing API.

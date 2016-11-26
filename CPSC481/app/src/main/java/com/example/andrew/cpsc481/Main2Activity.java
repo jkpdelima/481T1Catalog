@@ -1,5 +1,6 @@
 package com.example.andrew.cpsc481;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,11 +9,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
+
+import java.util.ArrayList;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -21,6 +25,7 @@ public class Main2Activity extends AppCompatActivity {
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
+    public ArrayList<String> cart = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,22 @@ public class Main2Activity extends AppCompatActivity {
         ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, chips);
         ListView chipsListView = (ListView)  findViewById(R.id.listOfChips);
         chipsListView.setAdapter(adapter);
+
+
+        chipsListView.setOnItemClickListener(
+                new AdapterView.OnItemClickListener(){
+
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        String data = String.valueOf(parent.getItemAtPosition(position));
+                        Toast.makeText(Main2Activity.this, "(" + data + ")" + " added to Cart", Toast.LENGTH_SHORT).show();
+                        cart.add(data);
+                        //Toast.makeText(Main2Activity.this, cart[0], Toast.LENGTH_SHORT).show();
+
+                        //startActivity(new Intent(getApplicationContext(), Main2Activity.class)); //goes to new activity
+                    }
+                }
+        );
 
         /*
         chipsListView.setOnItemClickListener(
