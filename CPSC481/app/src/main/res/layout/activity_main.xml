@@ -28,14 +28,14 @@
         android:textStyle="bold"
         android:textSize="40sp"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
         android:layout_below="@+id/edtSearch"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:id="@+id/fruits"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/fruits"/>
+        android:background="@drawable/fruits"
+        android:layout_height="65dp" />
 
     <Button
         android:text="veggies"
