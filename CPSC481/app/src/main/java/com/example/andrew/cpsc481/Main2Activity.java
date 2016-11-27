@@ -1,106 +1,94 @@
 package com.example.andrew.cpsc481;
 
+
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.Button;
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
+
 
 import java.util.ArrayList;
 
 public class Main2Activity extends AppCompatActivity {
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
-    public ArrayList<String> cart = new ArrayList<String>();
+
+    public ArrayList<String> chipsList = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        String[] chips = {"Lay's - Original", "Pringles - Sour Cream & Onion", "Doritos - Cool Ranch"};
-        ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, chips);
-        ListView chipsListView = (ListView)  findViewById(R.id.listOfChips);
-        chipsListView.setAdapter(adapter);
+        //buttons-----------------------------------------------------------------------------------
+        //lays add to cart button
+        Button lays = (Button) findViewById(R.id.button1);
+        lays.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+                chipsList.add("(Aisle 2) Lays - Classic");
+                //when button is clicked
+                //Intent intent = new Intent(getApplicationContext(), cartActivity.class);
+
+                //intent.putStringArrayListExtra("chipsList", chipsList);
+                //startActivity(intent);
+            }
+        });
+
+        //pringles add to cart button
+        Button pringles = (Button) findViewById(R.id.button2);
+        pringles.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+                chipsList.add("(Aisle 2) Pringle's - Sour Cream & Onion");
+
+            }
+        });
+
+        //doritos add to cart button
+        Button doritos = (Button) findViewById(R.id.button3);
+        doritos.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+                chipsList.add("(Aisle 2) Doritos - Cool Ranch");
+
+            }
+        });
 
 
-        chipsListView.setOnItemClickListener(
-                new AdapterView.OnItemClickListener(){
+        //map--------------------------------
+        Button map = (Button) findViewById(R.id.button10);
+        map.setOnClickListener(new View.OnClickListener(){
 
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        String data = String.valueOf(parent.getItemAtPosition(position));
-                        Toast.makeText(Main2Activity.this, "(" + data + ")" + " added to Cart", Toast.LENGTH_SHORT).show();
-                        cart.add(data);
-                        //Toast.makeText(Main2Activity.this, cart[0], Toast.LENGTH_SHORT).show();
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main2Activity.this, MapActivity.class);
+                startActivity(intent);
+            }
+        });
 
-                        //startActivity(new Intent(getApplicationContext(), Main2Activity.class)); //goes to new activity
-                    }
-                }
-        );
+        //cart-------------------------------
+        Button cart = (Button) findViewById(R.id.button21);
+        cart.setOnClickListener(new View.OnClickListener(){
 
-        /*
-        chipsListView.setOnItemClickListener(
-                new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        String chips = String.valueOf(parent.getItemAtPosition(position));
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main2Activity.this, cartActivity.class);
+                intent.putStringArrayListExtra("chips", chipsList);
+                startActivity(intent);
+            }
+        });
 
-                    }
-                }
-        );*/
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
+
     }
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    public Action getIndexApiAction() {
-        Thing object = new Thing.Builder()
-                .setName("Main2 Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
-                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
-                .build();
-        return new Action.Builder(Action.TYPE_VIEW)
-                .setObject(object)
-                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
-                .build();
-    }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        AppIndex.AppIndexApi.start(client, getIndexApiAction());
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        AppIndex.AppIndexApi.end(client, getIndexApiAction());
-        client.disconnect();
-    }
 }
