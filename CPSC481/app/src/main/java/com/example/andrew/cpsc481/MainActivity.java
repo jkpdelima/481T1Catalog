@@ -19,6 +19,8 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import static com.example.andrew.cpsc481.R.id.button8;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
         edtSearch = (EditText) findViewById(R.id.edtSearch);
         adapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.textView, data);
         lstSearch.setAdapter(adapter);
-        
+
+
         lstSearch.setOnItemClickListener(
                 new AdapterView.OnItemClickListener(){
 
@@ -76,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     lstSearch.setVisibility(View.GONE);
                 }
+
             }
 
             @Override
@@ -151,6 +155,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //map--------------------------------
+        Button map = (Button) findViewById(R.id.button10);
+        map.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MapActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();

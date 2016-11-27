@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/floor"
+    tools:context="com.example.andrew.cpsc481.MapActivity">
+
+    <Button
+        android:text="Exit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="39dp"
+        android:layout_marginEnd="39dp"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="#d5666e"/>
+
+    <Button
+        android:text="Entrance"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp"
+        android:backgroundTint="#66ff99"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/button2" />
+
+    <Button
+        android:text="Checkout"
+        android:backgroundTint="#416e53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:id="@+id/checkout"
+        android:layout_above="@+id/button2"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/button" />
+
+    <Button
+        android:text="Meat"
+        android:layout_width="wrap_content"
+        android:textSize="30dp"
+        android:backgroundTint="#db7a69"
+        android:layout_height="70dp"
+        android:id="@+id/meat_map"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/button"
+        android:layout_toLeftOf="@+id/button" />
+
+    <Button
+        android:text="Dairy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:backgroundTint="#d6d088"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/dairy_map"
+        android:layout_toEndOf="@+id/meat_map"
+        android:layout_alignBottom="@+id/meat_map"
+        android:layout_toRightOf="@+id/meat_map" />
+
+    <Button
+        android:text="Aisle 1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dairy_map"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/button10"
+        android:layout_toRightOf="@+id/button2"
+        android:layout_toEndOf="@+id/button2"
+        android:backgroundTint="#aeb6bf"/>
+
+    <Button
+        android:text="Aisle 2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button10"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button11"
+        android:layout_alignLeft="@+id/button10"
+        android:layout_alignStart="@+id/button10"
+        android:backgroundTint="#aeb6bf"/>
+
+    <Button
+        android:text="Aisle 3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button11"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button12"
+        android:layout_alignLeft="@+id/button11"
+        android:layout_alignStart="@+id/button11"
+        android:backgroundTint="#aeb6bf"/>
+
+    <Button
+        android:text="Aisle 4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button12"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button13"
+        android:layout_alignLeft="@+id/button12"
+        android:layout_alignStart="@+id/button12"
+        android:backgroundTint="#aeb6bf"/>
+
+    <Button
+        android:text="Aisle 5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button13"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button14"
+        android:layout_alignLeft="@+id/button13"
+        android:layout_alignStart="@+id/button13"
+        android:backgroundTint="#aeb6bf"/>
+
+    <Button
+        android:text="Veggies"
+        android:layout_width="50dp"
+        android:textSize="33dp"
+        android:backgroundTint="#713098"
+        android:layout_height="wrap_content"
+        android:id="@+id/veggies_map"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/meat_map"
+        android:layout_above="@+id/checkout" />
+
+    <Button
+        android:text="Fruits"
+        android:backgroundTint="#1853c8"
+        android:textSize="31dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/fruits_map"
+        android:layout_alignBottom="@+id/button14"
+        android:layout_toRightOf="@+id/veggies_map"
+        android:layout_toEndOf="@+id/veggies_map"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_alignTop="@+id/button10" />
+
+</RelativeLayout>
+
+

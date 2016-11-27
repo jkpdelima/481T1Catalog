@@ -31,7 +31,8 @@
         <activity android:name=".veggiesActivity" />
         <activity android:name=".meatsActivity" />
         <activity android:name=".dairyActivity" />
-        <activity android:name=".snacksActivity"></activity>
+        <activity android:name=".snacksActivity" />
+        <activity android:name=".MapActivity"></activity>
     </application>
 
 </manifest>
