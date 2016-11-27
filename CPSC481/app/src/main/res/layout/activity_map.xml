@@ -62,20 +62,6 @@
         android:layout_toLeftOf="@+id/button" />
 
     <Button
-        android:text="Dairy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:backgroundTint="#d6d088"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/dairy_map"
-        android:layout_toEndOf="@+id/meat_map"
-        android:layout_alignBottom="@+id/meat_map"
-        android:layout_toRightOf="@+id/meat_map" />
-
-    <Button
         android:text="Aisle 1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -161,6 +147,17 @@
         android:layout_marginLeft="18dp"
         android:layout_marginStart="18dp"
         android:layout_alignTop="@+id/button10" />
+
+    <Button
+        android:text="Dairy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:backgroundTint="#d6d088"
+        android:id="@+id/dairy_map"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
 

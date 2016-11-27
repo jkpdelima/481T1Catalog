@@ -33,7 +33,9 @@
         <activity android:name=".dairyActivity" />
         <activity android:name=".snacksActivity" />
         <activity android:name=".MapActivity" />
-        <activity android:name=".cartActivity"></activity>
+        <activity android:name=".cartActivity" />
+        <activity android:name=".StoreActivity" />
+        <activity android:name=".OtherStoreActivity"></activity>
     </application>
 
 </manifest>
