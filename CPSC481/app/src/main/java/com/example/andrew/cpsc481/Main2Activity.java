@@ -64,7 +64,16 @@ public class Main2Activity extends AppCompatActivity {
 
             }
         });
+        //search--------------------------------
+        Button search = (Button) findViewById(R.id.button8);
+        search.setOnClickListener(new View.OnClickListener(){
 
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main2Activity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //map--------------------------------
         Button map = (Button) findViewById(R.id.button10);

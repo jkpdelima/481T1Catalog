@@ -73,7 +73,7 @@
         android:background="@android:color/holo_orange_light" />
 
     <TextView
-        android:text="Lay's - Classic"
+        android:text="Aisle 2 - Lay's - Classic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/chipsText1"
@@ -86,7 +86,7 @@
         android:fontFamily="sans-serif" />
 
     <TextView
-        android:text="Doritos - Cool Ranch"
+        android:text="Aisle 2 - Doritos - Cool Ranch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="39dp"
@@ -110,7 +110,7 @@
         android:background="@android:color/holo_orange_light" />
 
     <TextView
-        android:text="Pringle's - Sour Cream &amp; Onion"
+        android:text="Aisle 2 - Pringle's - Sour Cream &amp; Onion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
