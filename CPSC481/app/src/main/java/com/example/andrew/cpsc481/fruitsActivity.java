@@ -18,7 +18,7 @@ public class fruitsActivity extends AppCompatActivity {
 
         setTitle("Fruits");
 
-        String[] item = {"berry", "stone fruit / drupe"};
+        String[] item = {"apples", "bananas","blueberries","cherries", "grapefruit","kiwi","mango","watermelon",};
         ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, item);
         ListView itemListView = (ListView)  findViewById(R.id.listOfFruits);
         itemListView.setAdapter(adapter);

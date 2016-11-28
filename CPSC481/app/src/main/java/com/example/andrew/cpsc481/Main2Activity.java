@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -30,6 +30,7 @@ public class Main2Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 chipsList.add("(Aisle 2) Lays - Classic");
+                Toast.makeText(Main2Activity.this,  "(Lays - Classic) added to cart", Toast.LENGTH_SHORT).show();
                 //when button is clicked
                 //Intent intent = new Intent(getApplicationContext(), cartActivity.class);
 
@@ -46,6 +47,7 @@ public class Main2Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 chipsList.add("(Aisle 2) Pringle's - Sour Cream & Onion");
+                Toast.makeText(Main2Activity.this,  "(Pringle's - Sour Cream & Onion) added to cart", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -58,6 +60,7 @@ public class Main2Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 chipsList.add("(Aisle 2) Doritos - Cool Ranch");
+                Toast.makeText(Main2Activity.this,  "(Doritos - Cool Ranch) added to cart", Toast.LENGTH_SHORT).show();
 
             }
         });

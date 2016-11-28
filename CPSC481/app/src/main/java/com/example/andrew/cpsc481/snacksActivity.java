@@ -1,5 +1,6 @@
 package com.example.andrew.cpsc481;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,7 +31,10 @@ public class snacksActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String data = String.valueOf(parent.getItemAtPosition(position));
-                        Toast.makeText(snacksActivity.this, "(" + data + ")" + " added to Cart", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(snacksActivity.this, "(" + data + ")" + " added to Cart", Toast.LENGTH_SHORT).show();
+                        if (data == "Chips"){
+                            startActivity(new Intent(getApplicationContext(), Main2Activity.class));
+                        }
 
                     }
                 }
